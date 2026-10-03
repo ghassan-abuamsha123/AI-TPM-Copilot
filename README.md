@@ -134,16 +134,6 @@ AI-TPM-Copilot/
 - AI workload performance tracking
 - Testable, modular Python design
 
-## 2-minute demo flow
-
-1. Show the weekly engineering update and its reported **GREEN** status.
-2. Click **Analyze Program**.
-3. Reveal the **WATERMELON CONDITION**.
-4. Explain firmware → driver → system-validation dependencies.
-5. Show the 44 vs 50 tokens/sec performance gap and open P1 defects.
-6. Show recommended corrective actions and human review.
-7. Close with the design principle: **AI accelerates interpretation; deterministic logic and human judgment protect the decision.**
-
 ## Disclaimer
 
 This is a portfolio/demo project built with fictional data for educational and interview purposes.
