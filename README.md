@@ -25,6 +25,83 @@ The fictional Project Phoenix update reports **GREEN**, while the underlying not
 
 AI TPM Copilot converts those notes into structured data and applies deterministic program-health logic to expose the hidden risk.
 
+## How It Works
+
+The AI Technical Program Manager Copilot separates AI-based interpretation from deterministic program analysis.
+
+### 1. Unstructured Project Update
+The user provides a natural-language project or engineering update containing information such as milestones, risks, dependencies, performance metrics, action items, and priority issues.
+
+### 2. AI-Powered Extraction
+The application uses an LLM through the OpenAI API to interpret the update and convert the unstructured text into structured program data.
+
+The model extracts information including:
+- Reported program status
+- Risks and priority issues
+- Action items and owners
+- Milestones and schedule changes
+- Technical dependencies
+- Performance metrics
+
+The LLM is used for interpretation rather than making the final program-health decision.
+
+### 3. Deterministic Program Analysis
+The structured data is passed to a Python-based analysis layer.
+
+Instead of asking the LLM to decide whether a program is GREEN, YELLOW, or RED, deterministic rules evaluate signals such as:
+- Schedule slips
+- Performance gaps
+- Open priority issues
+- Technical dependencies
+- Program risks
+
+This separation makes the program-health assessment more consistent, explainable, and repeatable.
+
+### 4. Program Intelligence
+The application converts the analysis into a TPM-focused dashboard showing:
+- Reported vs. evidence-based program health
+- Risk score
+- Reasons behind the status
+- Dependency chains
+- Performance against targets
+- Action items
+- Priority issues
+- Recommended corrective actions
+
+The application can also identify a "watermelon" condition: a program reported as GREEN while underlying evidence indicates material risk.
+
+### 5. Human-in-the-Loop Decision Making
+The system does not autonomously make the final program decision.
+
+AI helps identify and organize important signals, while deterministic logic supports consistent analysis. The Technical Program Manager remains responsible for reviewing the evidence, approving actions, escalating risks, and making the final decision.
+
+> **Design principle:** AI accelerates interpretation. Deterministic logic supports consistency. Human judgment owns the decision.
+
+---
+
+## Technical Architecture
+
+```text
+Weekly Engineering Update
+          |
+          v
+     OpenAI API / LLM
+          |
+          v
+ Structured Program Data
+          |
+          v
+ Deterministic Python Analyzer
+          |
+          v
+ Program Health + Risks + Dependencies
+          |
+          v
+   Streamlit Dashboard
+          |
+          v
+      TPM Review
+
 ## Architecture
 
 ```text
